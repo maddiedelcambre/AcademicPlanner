@@ -1,0 +1,28 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons menuToggle start>
+    <button ion-button icon-only color="black">
+     <ion-icon name="ios-menu"></ion-icon>
+  </button>
+  </ion-buttons>
+    <ion-title>LogOut</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <p>
+    Are you sure you want to log out?
+    <button ion-button (click) = 'LogOutUser()' color="light" full>Yes, Log out.</button>
+  </p>
+  <p>
+    <button ion-button (click) = 'GoHome()' full>No, return to Home</button>
+  </p>
+
+
+</ion-content>

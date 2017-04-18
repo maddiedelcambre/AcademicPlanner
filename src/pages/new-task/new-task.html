@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+
+
+    <ion-title>New Task</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-item >
+      <ion-input [(ngModel)]= "taskName" type="text" placeholder="Task"></ion-input>
+    </ion-item>
+    <ion-item >
+        <ion-label>Course</ion-label>
+        <ion-select >
+          <ion-option *ngFor="let course of CourseList"value="{{course?.crName}}">{{course?.crName}}</ion-option>
+        </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Due By</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeDue"></ion-datetime>
+
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Due Date</ion-label>
+      <ion-datetime displayFormat="MMM DD YYYY" pickerFormat="MMM DD YYYY"[(ngModel)]="event.dueDate"></ion-datetime>
+    </ion-item>
+
+    <button ion-item>
+      <ion-label>Priority</ion-label>
+      <ion-note item-right>None</ion-note>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-note item-right>None</ion-note>
+    </button>
+  </ion-list>
+  <div padding >
+  <button ion-button block (click)= "createTask(taskName, event.dueDate)">
+      Create Task
+  </button>
+</div>
+
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

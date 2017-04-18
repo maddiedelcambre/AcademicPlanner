@@ -1,0 +1,70 @@
+<!--
+  This page is for adding the courses to the course schedule
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add Course</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="outer-content">
+  <ion-list>
+      <ion-item>
+        <ion-input [(ngModel)]= "courseName" type="text" placeholder="Course Name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]= "location" type="text" placeholder="Location"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>Start Time</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h:mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Days of Week</ion-label>
+        <ion-select [(ngModel)]="DaysOfWeek">
+          <ion-option value="MWF">MWF</ion-option>
+          <ion-option value="TTH">TTH</ion-option>
+          <ion-option value="MW">MW</ion-option>
+          <ion-option value="MW">MTWTHF</ion-option>
+          <ion-option value="Mondays">Mondays</ion-option>
+          <ion-option value="Tuesdays">Tuesdays</ion-option>
+          <ion-option value="Wednesdays">Wednesdays</ion-option>
+          <ion-option value="Thursdays">Thursdays</ion-option>
+          <ion-option value="Fridays">Fridays</ion-option>
+          <ion-option value="Saturdays">Saturdays</ion-option>
+          <ion-option value="Sundays">Sundays</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-item>
+          <ion-input [(ngModel)]= "professor" type="text" placeholder="Professor"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input [(ngModel)]= "profEmail" type="text" placeholder="Professor's Email"></ion-input>
+        </ion-item>
+      </ion-list>
+
+  <div padding>
+  <button ion-button block (click)= "createCourse(courseName, location, event.timeStarts, DaysOfWeek, professor, profEmail)">
+      Create Course
+  </button>
+</div>
+
+</ion-content>
+
+<style>
+  ion-list:first-child {
+    margin-top: 32px;
+  }
+  ion-list + ion-list {
+    margin-top: 0;
+  }
+</style>

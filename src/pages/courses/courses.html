@@ -1,0 +1,89 @@
+<!--
+  (click)="doAlert({{course?.profName}}, {{course?.profEmail}})"
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons menuToggle start>
+    <button ion-button icon-only color="black">
+     <ion-icon name="ios-menu"></ion-icon>
+  </button>
+  </ion-buttons>
+    <ion-title>Courses</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-fab top right edge>
+     <button ion-fab color="vibrant" mini><ion-icon name="add"></ion-icon></button>
+     <ion-fab-list>
+       <button ion-fab (click) = "NewTask()"><ion-title>Task</ion-title></button>
+       <button ion-fab (click) = "NewCourse()"><ion-title>Course</ion-title></button>
+     </ion-fab-list>
+   </ion-fab>
+
+<ion-card>
+<ion-item>
+  <h2>CSCI 458 - Mobile Applications</h2>
+  <p>MWF 9:00-9:50am<br>
+  Weir 235</p>
+</ion-item>
+<ion-row>
+  <ion-col>
+    <button ion-button color="primary" clear small icon-left>
+      <ion-icon name='ios-information-circle'></ion-icon>
+       Professor
+    </button>
+  </ion-col>
+  <ion-col>
+    <button ion-button color="primary" clear small icon-center>
+      <ion-icon name='ios-add-circle'></ion-icon>
+        Course Task
+    </button>
+  </ion-col>
+  <ion-col>
+    <button ion-button color="primary" clear small icon-right>
+      <ion-icon name='md-create'></ion-icon>
+        Edit
+    </button>
+  </ion-col>
+</ion-row>
+</ion-card>
+
+<ion-list>
+  <ion-card *ngFor="let course of CourseList">
+    <ion-item>
+      <h2>{{course?.crName}}</h2>
+      <p>{{course?.doWeek}} - {{course?.time}}<br>
+        {{course?.courseLocation}}
+      </p>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+        <button ion-button
+            color="primary" clear small icon-left>
+          <ion-icon name='ios-information-circle'></ion-icon>
+           Professor
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-center>
+          <ion-icon name='ios-add-circle'></ion-icon>
+            Course Task
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="primary" clear small icon-right>
+          <ion-icon name='md-create'></ion-icon>
+            Edit
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+</ion-list>
+
+
+</ion-content>

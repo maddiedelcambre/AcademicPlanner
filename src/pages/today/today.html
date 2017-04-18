@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons menuToggle start>
+      <button ion-button icon-only color="black">
+       <ion-icon name="ios-menu"></ion-icon>
+    </button>
+    </ion-buttons>
+
+
+    
+
+
+    <ion-title>Today</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab top right edge>
+     <button ion-fab color="vibrant" mini><ion-icon name="add"></ion-icon></button>
+     <ion-fab-list>
+       <button ion-fab (click) = "NewTask()"><ion-title>Task</ion-title></button>
+       <button ion-fab (click) = "NewCourse()"><ion-title>Course</ion-title></button>
+
+     </ion-fab-list>
+   </ion-fab>
+
+    <ion-list>
+      <ion-list-header>
+        Assignments Due
+      </ion-list-header>
+      <ion-item>
+        <h2>Algorithms Homework 4</h2>
+        <h3>CSCI 433</h3>
+        <p>Email to TA by Midnight</p>
+        <ion-note item-right><h3>April 1<br>
+          11:00pm</h3></ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2>Exam 2</h2>
+        <h3>MATH 302</h3>
+        <ion-note item-right>2:00 pm</ion-note>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Upcoming Assignments
+      </ion-list-header>
+
+      <ion-item>
+        <h2>Internship Application</h2>
+        <h3>Toyota</h3>
+        <ion-note item-right>April 1st</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <h2>Essay 2</h2>
+        <h3>ENG 225</h3>
+        <p>Print out and bring to class</p>
+        <ion-note item-right> March 24th</ion-note>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>
+        Classes
+      </ion-list-header>
+      <ion-item>
+        <h2>CSCI 433</h2>
+        <p>Holman 138</p>
+        <ion-note item-right>10:00am</ion-note>
+      </ion-item>
+      <ion-item>
+        <h2>EL E 235</h2>
+        <h3>Anderson 111</h3>
+        <ion-note item-right>11:00 am</ion-note>
+      </ion-item>
+      <ion-item>
+        <h2>EL E 236 Lab</h2>
+        <h3>Anderson 301</h3>
+        <ion-note item-right>2:00pm</ion-note>
+      </ion-item>
+      <ion-item>
+        <h2>CSCI 433 Honors</h2>
+        <h3>Weir Conference Room</h3>
+        <ion-note item-right>5:00 pm</ion-note>
+      </ion-item>
+
+    </ion-list>
+</ion-content>

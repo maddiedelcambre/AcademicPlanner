@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons menuToggle start>
+      <button ion-button icon-only color="black">
+       <ion-icon name="ios-menu"></ion-icon>
+    </button>
+    </ion-buttons>
+
+    <ion-title>This Week</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-fab top right edge>
+     <button ion-fab color="vibrant" mini><ion-icon name="add"></ion-icon></button>
+     <ion-fab-list>
+       <button ion-fab (click) = "NewTask()"><ion-title>Task</ion-title></button>
+       <button ion-fab (click) = "NewCourse()"><ion-title>Course</ion-title></button>
+
+     </ion-fab-list>
+   </ion-fab>
+
+  <ion-item-group>
+      <ion-item-divider color="light">Monday
+      <ion-note item-right>April 1</ion-note>
+      </ion-item-divider>
+      <ion-item>Angola</ion-item>
+      <ion-item>Austria</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="light">Tuesday
+        <ion-note item-right>April 2</ion-note>
+        </ion-item-divider>
+        <ion-item>Angola</ion-item>
+        <ion-item>Austria</ion-item>
+      </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">Wednesday
+      <ion-note item-right>April 3</ion-note>
+      </ion-item-divider>
+      <ion-item>Bangladesh</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider color="light">Thursday
+      <ion-note item-right>April 4</ion-note>
+      </ion-item-divider>
+      <ion-item>Cambodia</ion-item>
+      <ion-item>Cyprus</ion-item>
+      <ion-item>Czech Republic</ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+        <ion-item-divider color="light">Friday
+        <ion-note item-right>April 5</ion-note>
+        </ion-item-divider>
+        <ion-item>Angola</ion-item>
+        <ion-item>Austria</ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider color="light">Saturday
+        <ion-note item-right>April 6</ion-note>
+        </ion-item-divider>
+        <ion-item>Bangladesh</ion-item>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider color="light">Sunday
+        <ion-note item-right>April 7</ion-note>
+        </ion-item-divider>
+        <ion-item>Cambodia</ion-item>
+        <ion-item>Cyprus</ion-item>
+        <ion-item>Czech Republic</ion-item>
+      </ion-item-group>
+</ion-content>
